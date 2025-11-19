@@ -1,0 +1,53 @@
+--- VENDA REGISTRADA EM 2025-11-16T21:51:33.709670300 ---
+ITEM: PC Intermediário Intel i5
+VALOR TOTAL: R$ 2100.0
+DETALHES:
+PC Intermediário Intel i5 contendo:
+	- Intel i5
+	- Placa B760
+
+-------------------------------------------------
+
+--- VENDA REGISTRADA EM 2025-11-16T22:14:27.416381400 ---
+ITEM: PC Básico Intel i3
+VALOR TOTAL: R$ 1400.0
+DETALHES:
+PC Básico Intel i3 contendo:
+	- Intel i3
+	- Placa H610
+
+-------------------------------------------------
+
+--- VENDA REGISTRADA EM 2025-11-16T22:15:12.511627700 ---
+ITEM: PC Intermediário Intel i5 + Water Cooler Premium + Kit de Iluminação RGB
+VALOR TOTAL: R$ 2750.0
+DETALHES:
+PC Intermediário Intel i5 contendo:
+	- Intel i5
+	- Placa B760
+	- (Upgrade) Water Cooler (R$ 450.0)
+	- (Upgrade) Kit de Iluminação RGB (R$ 200.0)
+
+-------------------------------------------------
+
+--- VENDA REGISTRADA EM 2025-11-16T22:32:59.387054700 ---
+ITEM: PC Básico Intel i3
+VALOR TOTAL: R$ 1400.0
+DETALHES:
+PC Básico Intel i3 contendo:
+	- Intel i3
+	- Placa H610
+
+-------------------------------------------------
+
+--- VENDA REGISTRADA EM 2025-11-16T22:37:23.309370500 ---
+ITEM: PC Básico Intel i3 + Water Cooler Premium
+VALOR TOTAL: R$ 1850.0
+DETALHES:
+PC Básico Intel i3 contendo:
+	- Intel i3
+	- Placa H610
+	- (Upgrade) Water Cooler (R$ 450.0)
+
+-------------------------------------------------
+

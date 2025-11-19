@@ -1,0 +1,128 @@
+--- VENDA REGISTRADA EM 2025-11-19T00:54:02.603275 ---
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 2025-11-19T01:00:44.522013
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 2025-11-19T01:01:39.880521400
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 2025-11-19T01:02:34.350865800
+ITEM: PC intermediário Ryzen 5 + Water Cooler Premium + Kit de Iluminação RGB
+VALOR TOTAL: R$ 3950.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+	- (Upgrade) Water Cooler (R$ 450.0)
+	- (Upgrade) Kit de Iluminação RGB (R$ 200.0)
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 2025-11-19T01:20:11.766661900
+ITEM: PC Customizado + Kit de fans
+VALOR TOTAL: R$ 2249.0
+DETALHES:
+PC Customizado contendo:
+	- Intel Core i3 14100F
+	- Placa-mãe H610
+	- 16GB RAM Genérica
+	- SSD 1TB Genérico
+	- (Upgrade) Kit de fans (R$ 49.99)
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 2025-11-19T01:32:11.323168100
+ITEM: PC intermediário Ryzen 5 + Water Cooler Premium
+VALOR TOTAL: R$ 3750.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+	- (Upgrade) Water Cooler (R$ 450.0)
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 19/11/2025 01:34:59
+ITEM: PC muito avançado Intel i9
+VALOR TOTAL: R$ 7000.0
+DETALHES:
+PC muito avançado Intel i9 contendo:
+	- Intel core i9 14900K
+	- Placa mãe Z790
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 19/11/2025 01:43:48
+ITEM: PC intermediário Ryzen 5 + Water Cooler Premium + Kit de Iluminação RGB
+VALOR TOTAL: R$ 3950.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+	- (Upgrade) Water Cooler (R$ 450.0)
+	- (Upgrade) Kit de Iluminação RGB (R$ 200.0)
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 19/11/2025 01:44:09
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 19/11/2025 01:45:10
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 19/11/2025 01:45:31
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
+VENDA REGISTRADA EM 19/11/2025 01:48:04
+ITEM: PC intermediário Ryzen 5
+VALOR TOTAL: R$ 3300.0
+DETALHES:
+PC intermediário Ryzen 5 contendo:
+	- AMD Ryzen 5 7600X
+	- Placa mãe B650
+
+-------------------------------------------------
+
