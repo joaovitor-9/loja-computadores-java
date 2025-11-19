@@ -1,4 +1,0 @@
-2=2
-RTX_4090=0
-PC_BASE_i3=5
-PC_BASE_i5=3
