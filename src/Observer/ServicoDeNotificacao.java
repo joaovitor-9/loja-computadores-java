@@ -16,12 +16,6 @@ public class ServicoDeNotificacao {
         lista.add(observer);
         System.out.println("Cliente inscrito com sucesso para " + nomeProduto);
     }
-    public void desinscrever(String nomeProduto, ObserverInterface observer) {
-        List<ObserverInterface> lista = inscritos.get(nomeProduto);
-        if (lista != null) {
-            lista.remove(observer);
-        }
-    }
     public void notificarPorProduto(String nomeProduto) {
         List<ObserverInterface> lista = inscritos.get(nomeProduto);
         if (lista == null || lista.isEmpty()) {

@@ -18,6 +18,6 @@ public class ProcessadorIntel implements ProcessadorInterface {
     }
     @Override
     public String getDescricao(){
-        return this.nome; // Continua simples, ótimo
+        return this.nome;
     }
 }

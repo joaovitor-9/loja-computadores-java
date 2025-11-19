@@ -31,12 +31,10 @@ public class FabricaAmd implements FabricaDeComponentesInterface {
             default -> throw new IllegalArgumentException("Modelo de placa-mãe AMD desconhecido: " + modelo);
         };
     }
-
     @Override
     public List<String> getModelosProcessador() {
         return List.of("Ryzen 3", "Ryzen 5", "Ryzen 7", "Ryzen 9");
     }
-
     @Override
     public List<String> getModelosPlacaMae() {
         return List.of("A620", "B650", "X670");

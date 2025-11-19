@@ -93,54 +93,6 @@ public class Main {
                 System.out.println("Opção inválida.");
         }
     }
-    private static void menuVendaComUpgrade() {
-        System.out.println("\n--- 1.2 Venda de PC de Estoque com Upgrades ---");
-        ComponenteInterface pcBase = escolherPcDoEstoque();
-        if (pcBase == null) {
-            return;
-        }
-        System.out.println("\nPC selecionado: " + pcBase.getNome());
-        System.out.println("Preço Base: R$ " + pcBase.getPreco());
-
-        // Guardamos o nome original aqui para usar na baixa do estoque
-        String nomeOriginalParaEstoque = pcBase.getNome();
-
-        ComponenteInterface pcFinal = menuAplicarUpgrades(pcBase);
-
-        // CORREÇÃO: Usamos o novo método passando o PC final (para o relatório)
-        // e o nome original (para baixar do estoque)
-        gerenciador.registrarVenda(pcFinal, nomeOriginalParaEstoque);
-    }
-    private static void menuAdicionarEstoque() {
-        System.out.println("\n--- 2. Adicionar Estoque ---");
-        gerenciador.exibirEstoque();
-        System.out.println("NOTA: Use nomes exatos como 'PC Básico Intel i3' ou 'RTX_4090'");
-        System.out.print("Digite o código do item para reabastecer: ");
-        scanner.nextLine();
-        String item = scanner.nextLine();
-
-        System.out.print("Digite a quantidade a adicionar: ");
-        int quantidade = lerEntradaInt();
-        if (quantidade > 0) {
-            gerenciador.adicionarEstoque(item, quantidade);
-            System.out.println("A verificar lista de espera para '" + item + "'...");
-            notificacao.notificarPorProduto(item);
-        } else {
-            System.out.println("Quantidade deve ser positiva.");
-        }
-    }
-    private static void menuNotificacao() {
-        System.out.println("Gerenciar Lista de Espera (Avise-me)");
-        System.out.print("Digite o nome do Cliente: ");
-        scanner.nextLine();
-        String nome = scanner.nextLine();
-        Cliente cliente = new Cliente(nome);
-        System.out.print("Qual item o cliente deseja ser notificado? (Nome exato): ");
-        String item = scanner.nextLine();
-
-        notificacao.inscrever(item, cliente);
-    }
-
     private static void venderPcPronto() {
         System.out.println("Venda de PC Pronto (Sem Upgrades)");
         ComponenteInterface pcEscolhido = escolherPcDoEstoque();
@@ -150,39 +102,18 @@ public class Main {
         }
         gerenciador.registrarVenda(pcEscolhido);
     }
-
-    private static void venderPcMontado() {
-        System.out.println("Venda de PC Customizado");
-
-        System.out.println("Escolha a plataforma: (1) Intel, (2) AMD");
-        int plat = lerEntradaInt();
-        FabricaDeComponentesInterface fabrica;
-        if (plat == 1) fabrica = new FabricaIntel();
-        else if (plat == 2) fabrica = new FabricaAmd();
-        else { System.out.println("Opção inválida."); return; }
-
-        ProcessadorInterface processador = escolherProcessador(fabrica);
-        if (processador == null) return;
-        PlacaMaeInterface placaMae = escolherPlacaMae(fabrica);
-        if (placaMae == null) return;
-
-        if (!placaMae.compativel(processador)) {
-            System.out.println("ERRO: Peças incompatíveis! A montagem falhou.");
+    private static void menuVendaComUpgrade() {
+        System.out.println("Venda de PC do Estoque com Upgrades");
+        ComponenteInterface pcBase = escolherPcDoEstoque();
+        if (pcBase == null) {
             return;
         }
-        Composite pcMontado = new Composite("PC Customizado");
-        pcMontado.adicionar(processador);
-        pcMontado.adicionar(placaMae);
-        pcMontado.adicionar(new Peca("16GB RAM Genérica", 300.0));
-        pcMontado.adicionar(new Peca("SSD 1TB Genérico", 350.0));
+        System.out.println("\nPC selecionado: " + pcBase.getNome());
+        System.out.println("Preço Base: R$ " + pcBase.getPreco());
 
-        System.out.println("\n--- PC Base Montado ---");
-        System.out.println(pcMontado.getDescricao());
-        System.out.println("Preço Base: R$ " + pcMontado.getPreco());
-
-        ComponenteInterface pcFinal = menuAplicarUpgrades(pcMontado);
-
-        gerenciador.registrarVenda(pcFinal);
+        String nomeOriginalParaEstoque = pcBase.getNome();
+        ComponenteInterface pcFinal = menuAplicarUpgrades(pcBase);
+        gerenciador.registrarVenda(pcFinal, nomeOriginalParaEstoque);
     }
     private static ComponenteInterface menuAplicarUpgrades(ComponenteInterface computadorBase) {
         while (true) {
@@ -216,6 +147,50 @@ public class Main {
             }
         }
     }
+    private static void venderPcMontado() {
+        System.out.println("Venda de PC Customizado");
+        System.out.println("Escolha a plataforma: (1) Intel, (2) AMD");
+
+        int plat = lerEntradaInt();
+
+        FabricaDeComponentesInterface fabrica;
+
+        if (plat == 1)
+            fabrica = new FabricaIntel();
+        else if (plat == 2)
+            fabrica = new FabricaAmd();
+        else { System.out.println("Opção inválida.");
+            return;
+        }
+
+        ProcessadorInterface processador = escolherProcessador(fabrica);
+
+        if (processador == null)
+            return;
+
+        PlacaMaeInterface placaMae = escolherPlacaMae(fabrica);
+
+        if (placaMae == null)
+            return;
+
+        if (!placaMae.compativel(processador)) {
+            System.out.println("ERRO: Peças incompatíveis! A montagem falhou.");
+            return;
+        }
+        Composite pcMontado = new Composite("PC Customizado");
+        pcMontado.adicionar(processador);
+        pcMontado.adicionar(placaMae);
+        pcMontado.adicionar(new Peca("16GB RAM", 300.0));
+        pcMontado.adicionar(new Peca("SSD 1TB", 350.0));
+
+        System.out.println("\n--- PC Base Montado ---");
+        System.out.println(pcMontado.getDescricao());
+        System.out.println("Preço Base: R$ " + pcMontado.getPreco());
+
+        ComponenteInterface pcFinal = menuAplicarUpgrades(pcMontado);
+        gerenciador.registrarVenda(pcFinal);
+    }
+
     private static ProcessadorInterface escolherProcessador(FabricaDeComponentesInterface fabrica) {
         System.out.println("Escolha um Processador:");
         List<String> modelos = fabrica.getModelosProcessador();
@@ -224,7 +199,8 @@ public class Main {
         }
         int escolha = lerEntradaInt() - 1;
         if (escolha < 0 || escolha >= modelos.size()) {
-            System.out.println("Seleção inválida."); return null;
+            System.out.println("Seleção inválida.");
+            return null;
         }
         return fabrica.criarProcessador(modelos.get(escolha));
     }
@@ -263,8 +239,11 @@ public class Main {
         System.out.print("Escolha o PC: ");
         int escolha = lerEntradaInt();
 
-        if (escolha == 0) return null;
+        if (escolha == 0)
+            return null;
+
         int indice = escolha - 1;
+
         if (indice < 0 || indice >= chaves.size()) {
             System.out.println("Seleção inválida.");
             return null;
@@ -277,5 +256,34 @@ public class Main {
         } else {
             return null;
         }
+    }
+    private static void menuAdicionarEstoque() {
+        System.out.println("\n--- 2. Adicionar Estoque ---");
+        gerenciador.exibirEstoque();
+        System.out.println("NOTA: Use nomes exatos como 'PC Básico Intel i3' ou 'RTX_4090'");
+        System.out.print("Digite o código do item para reabastecer: ");
+        scanner.nextLine();
+        String item = scanner.nextLine();
+
+        System.out.print("Digite a quantidade a adicionar: ");
+        int quantidade = lerEntradaInt();
+        if (quantidade > 0) {
+            gerenciador.adicionarEstoque(item, quantidade);
+            System.out.println("A verificar lista de espera para '" + item + "'...");
+            notificacao.notificarPorProduto(item);
+        } else {
+            System.out.println("Quantidade deve ser positiva.");
+        }
+    }
+    private static void menuNotificacao() {
+        System.out.println("Gerenciar Lista de Espera (Avise-me)");
+        System.out.print("Digite o nome do Cliente: ");
+        scanner.nextLine();
+        String nome = scanner.nextLine();
+        Cliente cliente = new Cliente(nome);
+        System.out.print("Qual item o cliente deseja ser notificado? (Nome exato): ");
+        String item = scanner.nextLine();
+
+        notificacao.inscrever(item, cliente);
     }
 }

@@ -14,9 +14,6 @@ public class Composite implements ComponenteInterface {
     public void adicionar(ComponenteInterface componente){
         componentes.add(componente);
     }
-    public void remover(ComponenteInterface componente){
-        componentes.remove(componente);
-    }
     public String getNome(){
         return nome;
     }

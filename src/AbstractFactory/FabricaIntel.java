@@ -7,6 +7,7 @@ public class FabricaIntel implements FabricaDeComponentesInterface {
     public static final double PRECO_I5 = 1600.0;
     public static final double PRECO_I7 = 3000.0;
     public static final double PRECO_I9 = 4200.0;
+
     public static final double PRECO_PLACA_H610 = 700.0;
     public static final double PRECO_PLACA_B760 = 1200.0;
     public static final double PRECO_PLACA_Z790 = 2800.0;
